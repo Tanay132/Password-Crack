@@ -1,0 +1,21 @@
+import time
+import random
+
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+password = input("set password:")
+
+print("\n Accessing password database...")
+
+guess = " "
+
+while guess != password:
+    guess = ""
+
+    for i in range(len(password)):
+        guess += random.choice(chars)
+
+    print("\nTrying password: ", guess)
+    time.sleep(0.01)
+
+    print("\nPassword found! It is: ", guess)
